@@ -1,0 +1,31 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Astro.props.title} | 崔逸飞设计</title>
+    <meta name="description" content={Astro.props.description ?? '崔逸飞的设计作品展示'} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- 思源黑体 (Noto Sans SC) - 强制加载所有字重 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 额外确保字体优先 -->
+    <style>
+      body { font-family: 'Noto Sans SC', system-ui, sans-serif; }
+    </style>
+  </head>
+  <!-- 强制显示滚动条，消除宽度抖动；设置行高基准 -->
+  <body class="bg-white text-gray-900 overflow-y-scroll leading-relaxed">
+    <Header />
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

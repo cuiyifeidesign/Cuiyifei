@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// 如需重新启用作品网格，取消下方注释并恢复 getCollection 导入
+// import { getCollection } from 'astro:content';
+// const allWorks = await getCollection('works');
+// const featuredWorks = allWorks.slice(0, 6);
+---
+
+<Layout title="首页">
+  <section class="py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 overflow-visible">
+
+      <!-- 横幅图片：点击跳转到 3DToolbar 页面 -->
+      <div class="col-span-3 relative overflow-visible rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:z-10 group">
+        <a
+          href="/works/3d-tools"
+          class="block relative overflow-hidden rounded-lg"
+        >
+          <div class="aspect-[9/4] w-full overflow-hidden rounded-lg">
+            <img
+              src="https://picsum.photos/id/1040/800/600"
+              alt="横幅"
+              class="h-full w-full object-cover transition-all duration-300 group-hover:brightness-75"
+            />
+          </div>
+          <!-- 底部渐变遮罩 -->
+          <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/25 via-black/10 to-transparent pointer-events-none rounded-b-lg"></div>
+          <!-- 默认显示标题，悬停时隐藏 -->
+          <h2 class="absolute bottom-2 left-3 text-white font-semibold text-xl drop-shadow z-10 transition-opacity duration-300 group-hover:opacity-0">
+            横幅标题占位
+          </h2>
+          <!-- 悬停时显示描述文字 -->
+          <div class="absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-20">
+            <p class="text-white text-xl text-center font-normal max-w-[90%]"
+               style="box-shadow: none !important; text-shadow: none !important; -webkit-text-stroke: 0; filter: none !important; background: none !important; backdrop-filter: none !important;">
+              横幅描述占位，请替换为实际内容
+            </p>
+          </div>
+        </a>
+
+        <!-- 下拉按钮：点击滚动到作品网格（当前已注释，作品网格启用后可取消此注释）
+        <button
+          onclick="const el = document.getElementById('works'); const y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top: y, behavior: 'smooth' });"
+          class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white opacity-80 hover:opacity-100 transition-opacity duration-300 cursor-pointer z-30"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        -->
+
+      </div>
+
+    </div>
+
+    <!-- 作品网格：显示前6个精选作品（当前已注释，启用时同步取消顶部 getCollection 注释）
+    <div id="works" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 overflow-visible mt-3">
+      {featuredWorks.map((work) => (
+        <a
+          href={`/works/${work.slug}`}
+          class="block relative overflow-visible rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:z-10 group"
+        >
+          <div class="aspect-[3/4] w-full overflow-hidden rounded-lg">
+            <img
+              src={work.data.image}
+              alt={work.data.title}
+              class="h-full w-full object-cover transition-all duration-300 group-hover:brightness-75"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/25 via-black/10 to-transparent pointer-events-none rounded-b-lg"></div>
+          <h2 class="absolute bottom-2 left-3 text-white font-semibold text-xl drop-shadow z-10 transition-opacity duration-300 group-hover:opacity-0">
+            {work.data.title}
+          </h2>
+          <div class="absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-20">
+            <p class="text-white text-xl text-center font-normal max-w-[90%]"
+               style="box-shadow: none !important; text-shadow: none !important; -webkit-text-stroke: 0; filter: none !important; background: none !important; backdrop-filter: none !important;">
+              {work.data.description}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+    -->
+
+    <!-- 查看全部作品按钮（当前已注释，启用时建议同步启用作品网格）
+    <div class="relative mt-8 mb-16">
+      <div class="absolute inset-0 flex items-center" aria-hidden="true">
+        <div class="w-full border-t border-gray-300"></div>
+      </div>
+      <div class="relative flex justify-center">
+        <a href="/portfolio"
+           class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:bg-gray-50">
+          <span>查看全部作品</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    -->
+
+  </section>
+</Layout>

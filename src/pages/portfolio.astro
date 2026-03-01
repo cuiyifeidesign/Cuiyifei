@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allWorks = await getCollection('works');
+---
+
+<Layout title="全部作品">
+  <section class="py-12">
+    <!-- 无标题，直接展示所有作品 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 overflow-visible">
+      {allWorks.map((work) => (
+        <a
+          href={`/works/${work.slug}`}
+          class="block relative overflow-visible rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:z-10 group"
+        >
+          <div class="aspect-[3/4] w-full overflow-hidden rounded-lg">
+            <img
+              src={work.data.image}
+              alt={work.data.title}
+              class="h-full w-full object-cover transition-all duration-300 group-hover:brightness-75"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/25 via-black/10 to-transparent pointer-events-none rounded-b-lg"></div>
+          <h2 class="absolute bottom-2 left-3 text-white font-semibold text-xl drop-shadow z-10 transition-opacity duration-300 group-hover:opacity-0">
+            {work.data.title}
+          </h2>
+          <div class="absolute inset-0 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-20">
+            <p class="text-white text-xl text-center font-normal max-w-[90%]"
+               style="box-shadow: none !important; text-shadow: none !important; -webkit-text-stroke: 0; filter: none !important; background: none !important; backdrop-filter: none !important;">
+              {work.data.description}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

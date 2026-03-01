@@ -1,0 +1,79 @@
+<header class="sticky top-0 z-30 border-b border-gray-200 bg-white shadow-sm">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- 品牌名称：只显示中文，whitespace-nowrap 防止换行产生空格 -->
+      <a href="/" class="text-xl font-medium leading-6 whitespace-nowrap">崔逸飞设计</a>
+
+      <!-- 桌面导航 -->
+      <div class="hidden sm:flex gap-8">
+        <a href="/" class="hover:text-blue-600 transition leading-6">首页</a>
+        <a href="/works/3dtoolbar" class="hover:text-blue-600 transition leading-6">3D工具条</a>
+        <!-- 全部作品（暂时注释，启用时取消下方注释）
+        <a href="/portfolio" class="hover:text-blue-600 transition leading-6">全部作品</a>
+        -->
+      </div>
+
+      <!-- 手机端汉堡菜单按钮 -->
+      <button id="menuBtn" class="sm:hidden p-2 focus:outline-none z-50 text-gray-900" aria-label="菜单">
+        <svg id="hamburgerIcon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="closeIcon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 手机端全屏导航菜单 -->
+  <div id="fullscreenMenu" class="fixed inset-0 bg-white z-40 hidden sm:hidden">
+    <div class="flex flex-col items-center justify-center h-full">
+      <div class="flex flex-col items-center space-y-8">
+        <a href="/" class="text-3xl text-gray-800 hover:text-blue-600 transition">首页</a>
+        <a href="/works/3dtoolbar" class="text-3xl text-gray-800 hover:text-blue-600 transition">3D工具条</a>
+        <!-- 全部作品（暂时注释，启用时取消下方注释）
+        <a href="/portfolio" class="text-3xl text-gray-800 hover:text-blue-600 transition">全部作品</a>
+        -->
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const hamburgerIcon = document.getElementById('hamburgerIcon');
+  const closeIcon = document.getElementById('closeIcon');
+  const fullscreenMenu = document.getElementById('fullscreenMenu');
+  const body = document.body;
+
+  if (!menuBtn || !hamburgerIcon || !closeIcon || !fullscreenMenu) {
+    console.error('必要的菜单元素未找到');
+  } else {
+    function openMenu() {
+      fullscreenMenu.classList.remove('hidden');
+      hamburgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      fullscreenMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', () => {
+      if (fullscreenMenu.classList.contains('hidden')) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    const menuLinks = fullscreenMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  }
+</script>
