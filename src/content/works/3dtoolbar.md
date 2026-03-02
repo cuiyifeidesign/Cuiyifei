@@ -8,6 +8,8 @@ category: "3ds Max 插件"
 
 3D工具条是一款专为 3ds Max 设计师打造的效率插件。目前已支持复制模型、粘贴模型、导入 CAD 三项核心功能，让日常操作更快捷流畅。更多强大功能正在持续开发中，敬请期待。
 
+
+
 <!-- 下载按钮区域：flex 布局，手机自动换行，桌面横排，左对齐 -->
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;justify-content:flex-start;">
 
@@ -27,3 +29,20 @@ category: "3ds Max 插件"
 
 <!-- 蓝奏云密码说明：点击蓝奏云按钮后文字变绿提示已复制 -->
 <p id="lanzou-tip" style="margin-top:0.75rem;font-size:0.8rem;color:#666;">蓝奏云提取密码：6666（点击蓝奏云按钮自动复制）</p>
+
+<!-- 标题：上边距2rem，下边距0.5rem，加粗大号字，深灰色 -->
+<p class="mt-8 mb-2 font-bold text-lg text-gray-800">更新日志</p>
+
+<!-- 日志列表：无圆点，左缩进2rem，列表项间距0.5rem -->
+<ul class="list-none pl-8 space-y-2">
+  <li>
+    <span class="font-bold text-gray-900 mr-2">v1.0</span>   <!-- 版本号：加粗最深灰，右间距0.5rem -->
+    <span class="text-gray-500 mr-2">2026-03-01</span>        <!-- 日期：浅灰色，右间距0.5rem -->
+    <span class="text-gray-600">发布了3D工具条</span>   <!-- 描述：中灰色 -->
+  </li>
+  <li>
+    <span class="font-bold text-gray-900 mr-2">v1.1</span>
+    <span class="text-gray-500 mr-2">2026-03-02</span>
+    <span class="text-gray-600">修复无法粘贴模型的问题</span>
+  </li>
+</ul>
