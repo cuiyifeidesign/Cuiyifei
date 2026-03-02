@@ -11,7 +11,7 @@ category: "3ds Max 插件"
 <!-- 下载按钮区域：flex 布局，手机自动换行，桌面横排，左对齐 -->
 <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;justify-content:flex-start;">
 
-  <!-- 蓝奏云：点击自动复制密码 666 到剪贴板 -->
+  <!-- 蓝奏云：点击自动复制密码 6666 到剪贴板 -->
   <!-- 更新链接：替换 href 引号内的地址 -->
   <a href="https://wwbbj.lanzout.com/b019vpmbab" target="_blank" rel="noopener noreferrer" onclick="navigator.clipboard.writeText('6666').then(()=>{var t=document.getElementById('lanzou-tip');t.textContent='蓝奏云提取密码：6666（已复制）';t.style.color='#22c55e';})" style="display:inline-block;width:200px;text-align:center;padding:0.75rem 0;background:#111;color:#fff;border-radius:0.5rem;text-decoration:none;font-size:1rem;font-weight:500;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">蓝奏云下载</a>
 
