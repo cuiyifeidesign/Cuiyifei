@@ -13,11 +13,11 @@ category: "3ds Max 插件"
 
   <!-- 蓝奏云：点击自动复制密码 666 到剪贴板 -->
   <!-- 更新链接：替换 href 引号内的地址 -->
-  <a href="https://wwbbj.lanzout.com/b019vpmbab" target="_blank" rel="noopener noreferrer" onclick="navigator.clipboard.writeText('666').then(()=>{var t=document.getElementById('lanzou-tip');t.textContent='蓝奏云提取密码：666（已复制）';t.style.color='#22c55e';})" style="display:inline-block;width:200px;text-align:center;padding:0.75rem 0;background:#111;color:#fff;border-radius:0.5rem;text-decoration:none;font-size:1rem;font-weight:500;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">蓝奏云下载</a>
+  <a href="https://wwbbj.lanzout.com/b019vpmbab" target="_blank" rel="noopener noreferrer" onclick="navigator.clipboard.writeText('6666').then(()=>{var t=document.getElementById('lanzou-tip');t.textContent='蓝奏云提取密码：6666（已复制）';t.style.color='#22c55e';})" style="display:inline-block;width:200px;text-align:center;padding:0.75rem 0;background:#111;color:#fff;border-radius:0.5rem;text-decoration:none;font-size:1rem;font-weight:500;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">蓝奏云下载</a>
 
   <!-- 百度网盘：链接自带提取码，无需额外操作 -->
   <!-- 更新链接：替换 href 引号内的地址 -->
-  <a href="https://pan.baidu.com/s/1NHlWkZOt9HQOicHreGS9tw?pwd=n6q1" target="_blank" rel="noopener noreferrer" style="display:inline-block;width:200px;text-align:center;padding:0.75rem 0;background:#111;color:#fff;border-radius:0.5rem;text-decoration:none;font-size:1rem;font-weight:500;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">百度网盘下载</a>
+  <a href="https://pan.baidu.com/s/19gdzeEOpeYtHQstci5guMA?pwd=6666" target="_blank" rel="noopener noreferrer" style="display:inline-block;width:200px;text-align:center;padding:0.75rem 0;background:#111;color:#fff;border-radius:0.5rem;text-decoration:none;font-size:1rem;font-weight:500;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">百度网盘下载</a>
 
   <!-- GitHub：指向 Release 列表页，可查看所有历史版本 -->
   <!-- 更新链接：替换 href 引号内的地址 -->
