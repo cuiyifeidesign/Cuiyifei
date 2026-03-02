@@ -26,4 +26,4 @@ category: "3ds Max 插件"
 </div>
 
 <!-- 蓝奏云密码说明：点击蓝奏云按钮后文字变绿提示已复制 -->
-<p id="lanzou-tip" style="margin-top:0.75rem;font-size:0.8rem;color:#666;">蓝奏云提取密码：666（点击蓝奏云按钮自动复制）</p>
+<p id="lanzou-tip" style="margin-top:0.75rem;font-size:0.8rem;color:#666;">蓝奏云提取密码：6666（点击蓝奏云按钮自动复制）</p>
